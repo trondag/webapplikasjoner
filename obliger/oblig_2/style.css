@@ -1,0 +1,80 @@
+* {
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+
+.create-todo-button {
+  font-size: 50px;
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.todo-card {
+  min-width: 250px;
+  max-width: 350px;
+  width: 25vw;
+  background-color: beige;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px
+}
+
+.finished-todos-table {
+  width: 100%;
+  text-align: left;
+}
+
+.hide-modal {
+  display: none;
+}
+
+.show-modal {
+  display: block;
+}
+
+.new-todo-modal {
+  background-color: aquamarine;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  -webkit-box-shadow: 6px 6px 34px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 34px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 34px 0px rgba(0,0,0,0.75);
+width: 40vw;
+}
+
+.new-todo-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 0 10px;
+}
+
+.new-todo-header h4:last-child{
+  cursor: pointer;
+}
+
+.new-todo-body {
+  padding: 20px;
+}
+
+.new-todo-input {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0
+}
+
+.new-todo-input input{
+  height: 30px;
+}
+
+.new-todo-input button {
+  height: 30px;
+}
