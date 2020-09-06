@@ -24,6 +24,14 @@
   padding: 10px
 }
 
+.todo-delete {
+  background-color: darksalmon;
+}
+
+.todo-complete {
+  background-color: aquamarine;
+}
+
 .finished-todos-table {
   width: 100%;
   text-align: left;

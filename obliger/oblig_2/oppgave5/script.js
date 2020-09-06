@@ -86,6 +86,8 @@ function testButtonClicked(){
 function resetButtonClicked(){
   document.querySelector('ul').remove()
   createUlWith4ListElements();
+  adDeleteButtonsToList();
+  addListenerToButtons();
 }
 
 function createUlWith4ListElements(){
