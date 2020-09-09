@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+  <title>Todos</title>
+</head>
+<body>
+  <script src="dist/bundle.js"></script>
+  <header>
+    <h1>
+      Create and manage todos
+    </h1>
+    <div>
+      <button class="create-todo-button">+ Todo</button>
+    </div>
+  </header>
+  <main>
+  <div class="active-todos-container">
+      <div class="card-container">
+        <div class="todo-card">
+          <h1 class="todo-title">Todo 1</h1>
+          <p class="todo-author">Mary Jane</p>
+          <p class="todo-description">text text tex tasfj ksagdnsk adgsg faf aa fsaf asf afs a f</p>
+          <button class="todo-delete">Delete</button>
+          <button class="todo-complete">Complete</button>
+        </div>
+        <div class="todo-card">
+          <h1 class="todo-title">Todo 2</h1>
+          <p class="todo-author">Mary Jane</p>
+          <p class="todo-description">text text tex tasfj ksagdnsk adgsg faf aa fsaf asf afs a f</p>
+          <button class="todo-delete">Delete</button>
+          <button class="todo-complete">Complete</button>
+        </div>
+        <div class="todo-card">
+          <h1 class="todo-title">Todo 3</h1>
+          <p class="todo-author">Mary Jane</p>
+          <p class="todo-description">text text tex tasfj ksagdnsk adgsg faf aa fsaf asf afs a f</p>
+          <button class="todo-delete">Delete</button>
+          <button class="todo-complete">Complete</button>
+        </div>
+      </div>
+    </div>
+    <div class="finished-todos-container">
+      <h2>Completed Todos</h2>
+      <button>Filter by date</button>
+      <table class="finished-todos-table">
+        <thead >
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Completed date</th>
+          </tr>
+        </thead>
+        <tbody class="finished-todos-tbody">
+          <tr>
+            <td>Todo 4</td>
+            <td>Mary Jane</td>
+            <td>Clean the house</td>
+            <td>22/7/2020</td>
+          </tr>
+          <tr>
+            <td>Todo 5</td>
+            <td>Mary Jane</td>
+            <td>Clean the house</td>
+            <td>23/7/2020</td>
+          </tr>
+          <tr>
+            <td>Todo 6</td>
+            <td>Mary Jane</td>
+            <td>Clean the house</td>
+            <td>24/7/2020</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="new-todo-modal hide-modal">
+      <div class="new-todo-header">
+        <h4>New todo</h4>
+        <h4 id="exit-create-todo-modal">🏃🏼</h4>
+      </div>
+      <div class="new-todo-body">
+        <form>
+          <div class="new-todo-input">
+            <label>Title</label>
+            <input id="new-todo-title" type="text">
+          </div>
+          <div class="new-todo-input">
+            <label>Description</label>
+            <input id="new-todo-description" type="text">
+          </div>
+          <div class="new-todo-input">
+            <label>Author</label>
+            <input id="new-todo-author" type="text">
+          </div>
+          <div class="new-todo-input">
+            <button id="create-todo-button" type="button">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
