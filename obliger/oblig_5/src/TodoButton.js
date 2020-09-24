@@ -1,11 +1,27 @@
 import React, {Component} from 'react'
+import todoStore from './todoStore'
+import { connect } from 'react-redux'
+import { showOrHideCreateTodoModal } from './todoActions'
 
 class TodoButton extends Component {
+
+  constructor(props){
+    super(props);
+    this.showOrHideCreateModal = this.showOrHideCreateModal.bind(this)
+  }
+  
+
+  showOrHideCreateModal(){
+    console.log(this)
+    this.props.showOrHideCreateTodoModal()
+  }
+
   render(){
     return(
-      <button class="create-todo-button">+ Todo</button>
+      <button type="button" onClick={this.showOrHideCreateModal} class="create-todo-button">+ Todo</button>
     )
   }
 }
 
-export default TodoButton
+
+export default connect(null, {showOrHideCreateTodoModal})(TodoButton)

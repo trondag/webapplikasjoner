@@ -1,26 +1,26 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
+import { connect } from 'react-redux'
 import TodoCard from './TodoCard'
 
 class TodoCardList extends Component {
+
+  createTodoCards(item) {
+    let key = (Math.floor(Math.random() * 10000)).toString()
+    return <TodoCard key={key} title={item.title} description={item.description} author={item.author}/>
+  }
+
   render() {
-    return <div class="card-container">
-      <TodoCard
-        title="Todo 1"
-        author="Mary Jane"
-        description="text text tex tasfj ksagdnsk adgsg faf aa fsaf asf afs a f">
-      </TodoCard>
-      <TodoCard
-        title="Todo 2"
-        author="Mary Jane"
-        description="text text tex tasfj ksagdnsk adgsg faf aa fsaf asf afs a f">
-      </TodoCard>
-      <TodoCard
-        title="Todo 3"
-        author="Mary Jane"
-        description="text text tex tasfj ksagdnsk adgsg faf aa fsaf asf afs a f">
-      </TodoCard>
+
+    const todoCards = this.props.todos.map(this.createTodoCards)
+
+    return <div className="card-container">
+      {todoCards}
   </div>
   }
 }
 
-export default TodoCardList
+const mapStateToProps = state => ({
+  todos: state.todos
+} )
+
+export default connect(mapStateToProps, null)(TodoCardList)
