@@ -10,17 +10,22 @@ class TodoCardList extends Component {
   }
 
   render() {
-
-    const todoCards = this.props.todos.map(this.createTodoCards)
-
+    let todoCards
+    const rawTodos = this.props.todos.filter(todo => { return !todo.completed})
+    console.log(rawTodos)
+    if (rawTodos.length === 0){
+      return <h1>Jippi! Ingen todos i dag!</h1>
+    } else {
+    todoCards = rawTodos.map(this.createTodoCards)
     return <div className="card-container">
       {todoCards}
   </div>
+    }
   }
 }
 
 const mapStateToProps = state => ({
   todos: state.todos
-} )
+})
 
 export default connect(mapStateToProps, null)(TodoCardList)

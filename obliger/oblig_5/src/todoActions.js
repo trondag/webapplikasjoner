@@ -5,6 +5,7 @@ import {
 
 
 export const addTodo = (todo) => {
+	console.log('hei')
 	return {
 		type: ADD_TODO,
 		payload: todo

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import todoStore from './todoStore'
 import { connect } from 'react-redux'
 import { showOrHideCreateTodoModal } from './todoActions'
 
